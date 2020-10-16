@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="stylesheet" href="styles.css">
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+
+<head>
+
+</head>
+
+<body>
+
+   <div class="main-content">                
+                {{>header}}
+            </div> 
+
+  <div class="login-page">
+   <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+          <h2>Login</h2>
+          <form action="/login" method="POST">
+      <div class="form-group">
+         <label for="">Username</label>
+         <input type="text" class="form-control" name="f_name" placeholder="Username"><br><br>
+      <div class="form-group">
+          <label for="">Username</label>
+         <input type="text" class="form-control" name="password" placeholder="Password"><br><br><br>
+            
+   <button type="submit" class="btn btn-lg btn-success">Login</button>
+   </form>
+
+   <p>Need an account <a href="/sign-up">Register</a></p>
+   <p>Go Back <a href="/">Home.</a></p>
+      </div>
+      <div class="col-md-4"></div>
+   </div>
+  </div>
+<div>
+   {{>footer}}
+   </div>
+</body>
+
+</html>

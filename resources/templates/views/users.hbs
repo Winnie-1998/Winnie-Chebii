@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>users</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>    
+        <body>
+            {{>header}}
+            <div class="main-content">
+             {{#each DbUsers}}             
+            {{this.uuid}}<span>.  </span>{{this.F_name}}<span>  </span>
+            {{this.l_name}}<span>  </span>{{this.gender}}
+            <span>   </span>            
+            <form method="post" enctype="multipart/form-data" action="/screen">
+            <input type="file" name="filename">
+            <input type="submit" value="upload">
+            </form>
+            {{/each}}
+            <button type="button"><a href="/resources/templates/views/video.hbs">Video</a></button>
+            </div>                  
+                        
+            {{>footer}}
+
+        </body>
+
+</html>

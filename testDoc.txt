@@ -1,0 +1,9 @@
+return function users() {
+                        Dbusers= +DbUsers.uuid+ ' ' + DbUsers.F_name+ ' ' +DbUsers.l_name+ ' ' +DbUsers.gender
+                        for(users = 1; users<=DbUsers.length; users++){                            
+                            console.log(users) 
+                        }   
+                    } 
+
+
+// ' ' +rows[i].uuid+ ' ' + rows[i].F_name+ ' ' +rows[i].l_name+ ' ' +rows[i].gender;

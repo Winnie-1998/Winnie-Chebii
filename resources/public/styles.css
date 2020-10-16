@@ -1,0 +1,233 @@
+.HomeBackground{    
+    /*background-image: url('C:/Users/Winnie/project/resources/public/backgroundImages/image1.jpg');*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #57241d;
+    font-family: arial;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;  
+    display: flex;
+    flex-direction: column;
+    min-height: 10Vh;
+  }
+
+body{
+    color: #57241d;
+    font-family: arial;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;  
+    display: flex;
+    flex-direction: column;
+    min-height: 10Vh;    
+    color: #57241d;
+}
+
+.login-page{
+    align-self: center;
+    border: 1px solid;
+    padding: 30px;
+}
+
+.main-content{
+    flex-grow: 5;
+}
+
+.talents{
+    float:left;
+    padding: 100 px;
+    width: 500px;
+    top: 0 px;
+}
+
+.skills{
+    float:right;
+    padding: 100 px;
+    width: 500px;
+    top: 0 px;
+}
+
+.form-registration{
+    border:1px solid #57241d;
+    height:460px
+}
+.reg-form{
+    text-align: center;
+    
+}
+
+
+.bio-data{
+float:left;
+width: 200px;
+padding:  2px;
+margin:5px;
+
+content: "";
+  clear: both;
+  display: table;
+}
+
+.PhysicalAddress{
+    float:right;
+    padding: 20px;
+    width: 400px;
+    margin:5px;    
+}
+.referees{
+    float:left;
+    width: 200px;
+    padding: 2 px;
+    margin:5px;
+}
+
+.contact-info{  
+    float:left;
+    padding: 2px;
+    width: 200px;
+    margin:5px;     
+}
+
+.submit-form{
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+
+footer{
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 1 px;
+    padding: 16px 0 ;
+    background-color: #57241d;
+    text-align: center;
+    color: white;
+}
+
+header{
+    margin-top: 2px;
+    margin-bottom: 1 px;
+    max-width: 1200px;
+    top:0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #57241d;
+  }
+  
+  li {
+    float: left;
+    overflow: hidden;
+    background-color: #57241d;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+li a:hover {
+    background-color: skyblue;
+  }
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: whitesmoke;
+    margin-right: 20px;
+    text-decoration: none;
+    }
+
+
+.portrait {
+    width: 500px;
+}
+
+input{
+    border: pointer;
+    padding: 8px;
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px; 
+}
+/*
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+.main{
+	padding:20px;
+	font-family: 'Josefin Slab', serif;
+	border : 2px solid  #57241d;
+	border-radius: 15px;
+	
+}
+.main h1{
+	font-size: 50px;
+	text-align:center;
+	font-family: 'Josefin Slab', serif;
+	color:  #57241d;
+}
+input{
+	font-family: 'Josefin Slab', serif;
+    width: 100%;
+	font-size: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid  #57241d;
+}
+input[type=submit] {
+	font-family: 'Josefin Slab', serif;
+	width: 100%;
+    background-color:  #57241d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 15px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input:hover {
+	font-family: 'Josefin Slab', serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: none;
+    border-bottom: 2px solid  #57241d;
+}
+
+input[type=submit]:hover {
+	font-family: 'Josefin Slab', serif;
+	width: 100%;
+    background-color: #549978;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 15px;
+}
+*/

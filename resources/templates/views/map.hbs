@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height:100%;
+        margin: 0;
+        padding: 0;
+      },
+    
+body {
+	background-image: url(" ");
+        background-repeat:no-repeat;
+       background-size:cover;
+}
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+
+        //{lat:0.0236, lng: 37.9062} --kenya coords
+        //map options
+        var options ={
+          center:{lat:0.3956, lng:36.9622},//Nyeri County
+          zoom: 12
+        }
+
+        //new map
+        map = new google.maps.Map(document.getElementById('map'),options);
+
+        //Listen for click on map
+        google.maps.event.addListener(map,'click',function(event){
+          //add marker on click
+          addMarker({coords:event.latlng});
+        });
+
+         //array of markers
+         var markers=[
+         {
+          coords:{lat:0.4197, lng:37.0400}, //Nyeri County
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1 class="backgroundPhoto" >Talent</h1><h1>Athlete</h1><img src="C:/Users/Winnie/project/uploads/talent.jpg" alt="Simply Easy Learning" width="200" height="">'
+
+          },
+
+          {
+          coords:{lat:0.3956, lng:36.9622},//dkut
+          content:'<h1>Skill</h1><h1>Agricultural Extension Officer</h1>'
+          },
+          {
+          coords:{lat:0.4145, lng:36.9622},//King'ong'o
+          content:'<h1>Skill</h1><h1>Coach</h1>'
+          },
+          {coords:{lat:0.4371, lng:36.9580}, //Nyeri town 
+          content:'<h1>Skill</h1><h1>Carpenter</h1>'
+          },
+          {
+          coords:{lat:0.3956, lng:36.9622},//dedan kimathi university
+          content:'<h1>Talent</h1><h1>Footballer</h1>',
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+          },
+          {
+          coords:{lat:0.4148, lng:36.9624},//King'ong'o edited
+          content:'<h1>Skill</h1><h1>Art&Design</h1>'
+          },
+          {
+          coords:{lat:0.4147, lng:36.9628},//King'ong'o
+          content:'<h1>Skill</h1><h1>Musician</h1>'
+          },
+          {
+          coords:{lat:0.4187, lng:37.0390}, //Nyeri County
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>NetBaller</h1>'
+          },
+          {
+          coords:{lat:0.4180, lng:37.03700}, //Nyeri County
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>FootBaller   </h1>'
+          },
+          {
+          coords:{lat:0.3987, lng:36.9657},//dkut
+          content:'<h1>Skill</h1><h1>Agricultural Extension Officer</h1>'
+          },
+          {
+          coords:{lat:0.3100, lng:36.9522},//dkut
+          content:'<h1>Skill</h1><h1>Agricultural Extension Officer</h1>'
+          },
+          {
+          coords:{lat:0.3856, lng:36.9522},//dkut
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Skill</h1><h1>Musician</h1>'
+          },
+          {coords:{lat:0.4371, lng:36.9580}, //Nyeri town 
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>Netballer</h1>'
+          },
+          {coords:{lat:0.4261, lng:36.9450}, //Nyeri town 
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>Netballer</h1>'
+          },
+          {coords:{lat:0.4311, lng:36.9510}, //Nyeri town 
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>Netballer</h1>'
+          },
+          {coords:{lat:0.4325, lng:36.9535}, //Nyeri town 
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Talent</h1><h1>Netballer</h1>'
+          },
+         ];
+
+         //loop through markers
+         for(var i =0; i<markers.length; i++){
+           //add markers            
+           addMarker(markers[i]);
+         }
+        
+         //add marker Function 
+        function addMarker(props){
+          var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          title:'Talent',
+          icon:props.iconImage     
+        });
+        //check for custom image
+        if(props.iconImage){
+          //set icon image
+          marker.setIcon(props.iconImage);  
+        }
+        //check for content   
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+          content:props.content
+        });
+         marker.addListener('click',function(){
+        infoWindow.open(map,marker);
+         }); 
+        }          
+       }      
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDujUAJRUB_GX6aE_C4wNUi5MOjIvVcIy0&callback=initMap"></script>
+  </body>
+</html>

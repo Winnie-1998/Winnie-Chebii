@@ -1,0 +1,70 @@
+
+<html>
+    <head>
+        <title>Sign-Up</title>
+        <link rel="stylesheet" href="styles.css"> 
+       <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    </head>
+        <body>
+            <div class="main-content">                
+                {{>header}}
+            </div> 
+
+<div class="container"> 
+    <div class="row">   
+        <div class="col-md-4">  
+<form action="/sign-up" method="post" class='form-registration'>
+            <p class="reg-form"><b><u>Registration Form</u></b></p>
+            <p class="bio-data"><label><b>Bio-Data</b></label><br>
+            <!--<label>UserName:</label><input placeholder="Username" type='text' required name="U_name"><br>-->
+            <label>First Name:</label><input placeholder="First Name" type='text' required name="F_name"><br>
+            <label>Last Name:</label><input placeholder="last Name" type='text' required name="l_name"><br>
+            <!--<label>Email:</label><input placeholder="xyz@xxx.xxx" type='email' required name="email"><br>-->
+            <label>Gender:</label><input placeholder="M/F" type='text' required name="gender"><br>
+            <label>Year of Birth:</label><input placeholder ="e.g 2019" type='text' name="year_of_birth"required><br>
+            <label>password:</label><input placeholder="password" type="password" class= "form-control" formControlName="password"  name="password" required><br>
+            </p>
+            <p class ="contact-info">
+                <label><b>Your Contact Info.</b></label><br>
+                <label>Phone No.:</label><input placeholder=" " type='text'  name="ContactPhone_no" required><br>
+                <labeL>Email:</label><input placeholder="xyz@mail.com" type='email' name="ContactEmail" required><br>
+                <label>Year Started:</label><input placeholder=" address" type='text' name="YearStarted"  required><br>
+                <label>Awards:</label><input placeholder="Award Name" type='text' name="Awards"><br>
+                <div class="talentSkill">
+                </p>
+            
+            <p class="referees">
+                <label><b>Referees</b></label><br>
+                <label>First Name:</label><input placeholder="First Name" type='text' name="RefereeF_name" required><br>
+                <label>Last Name:</label><input placeholder="Last Name" type='text' name="RefereeL_name" required><br>
+                <label>Position:</label><input placeholder="Position Title" type='text' name="postion" required><br>
+                <label>Address:</label><input placeholder=" address" type='text' name="address" required><br>
+                <label>Phone-No:</label><input placeholder=" " type='text' name="RefereePhone_no" required><br>
+                <label>mail:</label><input placeholder="xyz@mail.com" type='email' name="RefereeEmail"  required>
+            </p>
+                    <div class="talentsCheckbox">
+                    <p id="talents" name="talent"><b>TALENTS</b><br>
+           
+                     </div>
+
+                     <div class = "skillsCheckbox">
+                    <p id="skills" name="skill" ><b>SKILLS</b><br>
+                    <label>Agricultural Extension</label><br>
+                    <label>Carpentry</label><br>
+                    <label>Massonary</label><br>
+                    <label>Coaching</label><br>
+                    </p>
+                    </div>
+                </div>
+                <p class= "submit-form"></p>
+<button type="submit" class="btn btn-lg btn-success"><b>Submit Details</b></button>
+            </p>        
+            </form>       
+             </div>
+        </div> 
+    
+            {{>footer}}
+
+        </body>
+    
+</html>
